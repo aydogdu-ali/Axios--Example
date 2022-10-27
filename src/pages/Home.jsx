@@ -11,28 +11,27 @@ const Home = () => {
 
   // fonsiyonk tanımlayarak Api'den veri çekiyorum.
   const getTutorials = async () => {
-
     try {
-      const {data} = await axios(url);
-    console.log(data) 
-    setTutorials(data)
+      const { data } = await axios(url);
+      console.log(data);
+      setTutorials(data);
     } catch (error) {
-      console.log(error) 
+      console.log(error);
     }
-    
-  }
+  };
 
   //DidMount olarak çalışacaktır.
   //ilk render den sonra 1 kez çalışacak
-  useEffect(()=>{
-    getTutorials()
-  },[])
+  useEffect(() => {
+    getTutorials();
+  }, []);
 
   return (
     <>
-        {/*Bunu props olarak gönderiyorum çünkü aynı anda her 2 componentin render olmasını sağlıyorum.*/} 
-      <AddTutorial getTutorials ={getTutorials} />
-      <TutorialList tutorials= {tutorials} />
+      {/*Bunu props olarak gönderiyorum çünkü aynı anda her 2 componentin render olmasını sağlıyorum.*/}
+      <AddTutorial getTutorials={getTutorials} />
+      {/*getTutorialsı gönderiyorum çünkü silindikten sonra da render olmasını sağlıyorum.*/}
+      <TutorialList tutorials={tutorials} getTutorials={getTutorials} />
     </>
   );
 };

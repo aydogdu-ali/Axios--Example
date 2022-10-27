@@ -2,8 +2,14 @@ import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
 import EditTutorial from "./EditTutorial";
+import {useState} from "react"
+
 
 const TutorialList = ({ tutorials, getTutorials }) => {
+
+  const [editItem, setEditItem] = useState("");
+
+
   // silme simgesine tıklandığında tekiklenecek fonksiyonu tanımladım.
   const deleteTutorial = async (id) => {
     const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
@@ -44,8 +50,8 @@ const TutorialList = ({ tutorials, getTutorials }) => {
                     size={20}
                     type="button"
                     data-bs-toggle="modal" data-bs-target="#edit-modal"
-                  
-                    className="me-2 text-warning" 
+                   className="me-2 text-warning"
+                   onClick ={()=> setEditItem(item)} 
                   />
 
                   <AiFillDelete
@@ -60,7 +66,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
           })}
         </tbody>
       </table>
-      <EditTutorial/>
+      <EditTutorial editItem ={editItem} getTutorials={getTutorials}/>
     </div>
   );
 };

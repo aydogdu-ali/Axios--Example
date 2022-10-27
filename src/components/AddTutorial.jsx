@@ -1,11 +1,35 @@
 import { useState } from "react";
+import axios from "axios";
 
-const AddTutorial = () => {
+const AddTutorial = ({getTutorials}) => {
   // inputların stateleri
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = (e) => {};
+  // form daki verileri göndermek için obje oluşturuyorum.
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // obje kısmı
+    const newTutorial = { title: title, description: description };
+    // oluşturulan objenin database gönderilmesini sağladım
+    sentaddTutorial(newTutorial);
+    // veri gönderildikten sonra input içlerini boşalltım.
+    setTitle("");
+    setDescription("");
+  };
+
+  // POST işlemi
+  // oluşturalan objeyi fonksiyona parametre olarak gönderdik
+  const sentaddTutorial = async (newTutorial) => {
+    const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
+    try {
+      await axios.post(url, newTutorial);
+    } catch (error) {
+      console.log(error);
+    }
+    // her veri gönderme işinden sonra Api deki bilgiler yeniden çekilir.
+    getTutorials()
+  };
 
   return (
     <div className="container text-center mt-4">

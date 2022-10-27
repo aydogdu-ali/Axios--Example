@@ -30,7 +30,8 @@ const Home = () => {
 
   return (
     <>
-      <AddTutorial />
+        {/*Bunu props olarak gönderiyorum çünkü aynı anda her 2 componentin render olmasını sağlıyorum.*/} 
+      <AddTutorial getTutorials ={getTutorials} />
       <TutorialList tutorials= {tutorials} />
     </>
   );

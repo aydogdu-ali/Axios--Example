@@ -1,6 +1,7 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
+import EditTutorial from "./EditTutorial";
 
 const TutorialList = ({ tutorials, getTutorials }) => {
   // silme simgesine tıklandığında tekiklenecek fonksiyonu tanımladım.
@@ -42,8 +43,11 @@ const TutorialList = ({ tutorials, getTutorials }) => {
                   <FaEdit
                     size={20}
                     type="button"
-                    className="me-2 text-warning"
+                    data-bs-toggle="modal" data-bs-target="#edit-modal"
+                  
+                    className="me-2 text-warning" 
                   />
+
                   <AiFillDelete
                     size={22}
                     type="button"
@@ -56,6 +60,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
           })}
         </tbody>
       </table>
+      <EditTutorial/>
     </div>
   );
 };

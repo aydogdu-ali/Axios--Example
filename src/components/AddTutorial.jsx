@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const AddTutorial = ({getTutorials}) => {
+const AddTutorial = ({ getTutorials }) => {
   // inputların stateleri
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -16,6 +16,7 @@ const AddTutorial = ({getTutorials}) => {
     // veri gönderildikten sonra input içlerini boşalltım.
     setTitle("");
     setDescription("");
+    
   };
 
   // POST işlemi
@@ -28,7 +29,7 @@ const AddTutorial = ({getTutorials}) => {
       console.log(error);
     }
     // her veri gönderme işinden sonra Api deki bilgiler yeniden çekilir.
-    getTutorials()
+    getTutorials();
   };
 
   return (

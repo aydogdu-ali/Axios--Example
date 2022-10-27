@@ -3,7 +3,7 @@ import { useState } from "react";
 const AddTutorial = () => {
   // inputların stateleri
   const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleSubmit = (e) => {};
 
@@ -34,8 +34,8 @@ const AddTutorial = () => {
             className="form-control"
             id="desc"
             placeholder="Enter your Description"
-            value={desc}
-            onChange={(e) => setDesc(e.target.value)}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
             required
           />
         </div>

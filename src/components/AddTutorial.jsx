@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { BsCheckCircle } from "react-icons/bs";
 
 const AddTutorial = ({ getTutorials }) => {
   // inputların stateleri
@@ -64,7 +65,12 @@ const AddTutorial = ({ getTutorials }) => {
             required
           />
         </div>
-        <button className="btn btn-danger mb-4">Submit</button>
+   
+         <BsCheckCircle size={40}
+                    type="button"
+                    className="text-success bg-warning rounded-circle" 
+                    onClick ={handleSubmit}/>
+       
       </form>
     </div>
   );

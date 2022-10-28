@@ -3,7 +3,11 @@ import TutorialList from "../components/TutorialList";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+
 const Home = () => {
+
+
+
   // Api den gelen veriyi tutacağamız stateyi tanımlıyorum.
   const [tutorials, setTutorials] = useState([]);
 
@@ -27,12 +31,15 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="Ap">
       {/*Bunu props olarak gönderiyorum çünkü aynı anda her 2 componentin render olmasını sağlıyorum.*/}
-      <AddTutorial getTutorials={getTutorials} />
+      <AddTutorial getTutorials={getTutorials}  />
       {/*getTutorialsı gönderiyorum çünkü silindikten sonra da render olmasını sağlıyorum.*/}
-      <TutorialList tutorials={tutorials} getTutorials={getTutorials} />
-    </>
+
+          <TutorialList tutorials={tutorials} getTutorials={getTutorials} /> 
+    
+
+    </div>
   );
 };
 

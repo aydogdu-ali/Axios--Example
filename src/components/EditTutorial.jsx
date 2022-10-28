@@ -72,7 +72,7 @@ const EditTutorial = ({getTutorials,editItem}) => {
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control "
                     id="desc"
                     placeholder="Enter your Description"
                     value={description || ""}
@@ -92,7 +92,7 @@ const EditTutorial = ({getTutorials,editItem}) => {
               </button>
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn btn-primary "
                 onClick={handleSubmit}
               >
                 Save changes

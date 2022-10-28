@@ -5,10 +5,12 @@ import EditTutorial from "./EditTutorial";
 import {useState} from "react"
 
 
-const TutorialList = ({ tutorials, getTutorials }) => {
+const TutorialList = ({ tutorials, getTutorials,toggleTheme} ) => {
 
   const [editItem, setEditItem] = useState("");
+  
 
+  
 
   // silme simgesine tıklandığında tekiklenecek fonksiyonu tanımladım.
   const deleteTutorial = async (id) => {
@@ -25,9 +27,10 @@ const TutorialList = ({ tutorials, getTutorials }) => {
   };
 
   return (
-    <div className="container mt-4">
-      <table className="table table-striped">
-        <thead>
+
+    <div className="container mt-4  ">
+      <table className="table ">
+        <thead className ="text-danger">
           <tr>
             <th scope="col">#id</th>
             <th scope="col">Title</th>
@@ -37,7 +40,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className ="text-dark bg-light ">
           {tutorials?.map((item) => {
             const { id, title, description } = item;
             return (
@@ -67,7 +70,8 @@ const TutorialList = ({ tutorials, getTutorials }) => {
         </tbody>
       </table>
       <EditTutorial editItem ={editItem} getTutorials={getTutorials}/>
-    </div>
+      </div>
+     
   );
 };
 

@@ -3,7 +3,7 @@
 
 #Uygulamada Api'den veri çekme değiştime ve düzeltme işlemleri yapılmıştır.
 
-# Api'den veri çekme  ve güncelleme işlemlerinde  axios kütüphanesini kullandım. 
+#Api'den veri çekme  ve güncelleme işlemlerinde  axios kütüphanesini kullandım. 
 
 #React component yapısı içinde veri gönderimi ile useState ve useEffect konuları ile çalıştım. 
 

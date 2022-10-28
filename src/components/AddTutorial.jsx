@@ -34,8 +34,8 @@ const AddTutorial = ({ getTutorials }) => {
   };
 
   return (
-    <div className="container text-center mt-4">
-      <h1 className="display-6 text-danger">Add Your Tutorial</h1>
+    <div className="container text-center mt-4 w-75">
+      <h1 className="display-6 text-danger fw-bolder">Add Your Work</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">

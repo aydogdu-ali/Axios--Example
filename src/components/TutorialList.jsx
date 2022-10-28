@@ -28,7 +28,7 @@ const TutorialList = ({ tutorials, getTutorials,toggleTheme} ) => {
 
   return (
 
-    <div className="container mt-4  ">
+    <div className="container mt-5 w-75">
       <table className="table ">
         <thead className ="text-danger">
           <tr>
@@ -53,7 +53,7 @@ const TutorialList = ({ tutorials, getTutorials,toggleTheme} ) => {
                     size={20}
                     type="button"
                     data-bs-toggle="modal" data-bs-target="#edit-modal"
-                   className="me-2 text-warning"
+                   className="me-2 text-success "
                    onClick ={()=> setEditItem(item)} 
                   />
 

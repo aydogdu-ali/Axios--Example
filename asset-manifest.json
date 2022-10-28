@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Axios--Example/static/css/main.ccec7809.css",
-    "main.js": "/Axios--Example/static/js/main.adce3afe.js",
-    "index.html": "/Axios--Example/index.html",
-    "main.ccec7809.css.map": "/Axios--Example/static/css/main.ccec7809.css.map",
-    "main.adce3afe.js.map": "/Axios--Example/static/js/main.adce3afe.js.map"
+    "main.css": "/aydogdu-ali/Axios--Example/static/css/main.ccec7809.css",
+    "main.js": "/aydogdu-ali/Axios--Example/static/js/main.adce3afe.js",
+    "index.html": "/aydogdu-ali/Axios--Example/index.html",
+    "main.ccec7809.css.map": "/aydogdu-ali/Axios--Example/static/css/main.ccec7809.css.map",
+    "main.adce3afe.js.map": "/aydogdu-ali/Axios--Example/static/js/main.adce3afe.js.map"
   },
   "entrypoints": [
     "static/css/main.ccec7809.css",

@@ -1,22 +1,15 @@
-# API Base URLs
 
-## https://tutorials-api-cw.herokuapp.com/api/tutorials
+#Bu çalışmada HTML,Boostrapt ve React ve React-Icons araçları kullanılmıştır.
 
-## https://axios-example-cw.herokuapp.com/api/tutorials
+#Uygulamada Api'den veri çekme değiştime ve düzeltme işlemleri yapılmıştır.
 
-## https://cw-axios-example.herokuapp.com/api/tutorials
+# Api'den veri çekme  ve güncelleme işlemlerinde  axios kütüphanesini kullandım. 
 
-### API ENDPOINTS
+#React component yapısı içinde veri gönderimi ile useState ve useEffect konuları ile çalıştım. 
 
-- GET `api/tutorials` get all Tutorials
-- GET `api/tutorials/:id` get Tutorial by id
-- POST `api/tutorials` add new Tutorial
-- PUT `api/tutorials/:id` update Tutorial by id
-- DELETE `api/tutorials/:id` remove Tutorial by id
-- DELETE `api/tutorials` remove all Tutorials
-- GET `api/tutorials/published` find all published Tutorials
-- GET `api/tutorials?title=[keyword]` find all Tutorials which title contains 'keyword'
+#Kaynak Kodlarında Detaylı açıklamara yer verdim.
 
-# Deployed Frontend
 
-## https://axios-example.netlify.app/
+Uygulamanın sonucunu aşağıdaki linke tıklayarak görebilirsiniz.
+
+## https://aydogdu-ali.github.io/Axios--Example/
